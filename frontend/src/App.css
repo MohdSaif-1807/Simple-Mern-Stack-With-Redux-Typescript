@@ -1,0 +1,73 @@
+.MuiInputLabel-root {
+  color: white !important;
+  font-family: "poppins" !important;
+  font-weight: bold !important;
+}
+
+.customButton {
+  font-family: "poppins";
+  font-weight: "bold";
+  background-color: "#FF5B31";
+  color: "white";
+  border-radius: "20px";
+}
+
+.customButton:hover {
+  background-color: "white";
+  color: "black";
+}
+
+.MuiInput-root {
+  color: white !important;
+  font-family: "poppins" !important;
+  font-weight: bold !important;
+}
+
+.Message {
+  font-family: poppins;
+  color: white;
+}
+
+.imageTemp {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 40px;
+  width: 520px;
+  height: 555px
+}
+
+.imageTempLogin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 40px;
+  width: 520px;
+  height: 500px
+}
+
+.loginStyles {
+  display: inline;
+  font-family: poppins;
+  color: #FF5B31;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.multilineColor {
+  color: white;
+}
