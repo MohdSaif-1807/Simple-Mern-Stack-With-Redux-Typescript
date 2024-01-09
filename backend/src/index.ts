@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 
 
 const app = express();
-dotenv.config({ path: "./.env" });
+dotenv.config({});
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({}));
