@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, createAction, createAsyncThunk, createReducer, Action, AnyAction } from "@reduxjs/toolkit";
+import { createReducer, AnyAction } from "@reduxjs/toolkit";
 export interface DataSetBrief {
     sno: number
     ImageUrl: string,

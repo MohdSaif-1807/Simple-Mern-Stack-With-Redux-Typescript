@@ -2,7 +2,6 @@ import { Box, Grid, Modal, Typography } from "@mui/material"
 import { useContext, useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import { AppContext } from "../AppContext";
-import characterbrief from "../Data/characterbrief.json";
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { RootState } from "../Store";
@@ -21,13 +20,6 @@ const style = {
     boxShadow: 24,
     p: 4,
 };
-interface CharacterBrief {
-    sno: number,
-    ImageUrl: string,
-    Name: string,
-    Game: string,
-    Description: string
-}
 
 export const ModalComponent = () => {
     const { open, setOpen, index } = useContext(AppContext);

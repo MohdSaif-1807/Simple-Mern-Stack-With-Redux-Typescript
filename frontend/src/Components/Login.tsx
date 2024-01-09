@@ -11,6 +11,7 @@ import styled from "@emotion/styled";
 import { RootState } from "../Store";
 import { useNavigate } from "react-router-dom";
 import { login } from "../Actions/Authentication";
+import { fetchAllCharactersData } from "../Actions/Fetching";
 
 const CustomButton = styled(Button)({
     marginTop: "30px",
@@ -49,7 +50,13 @@ export const Login = () => {
         console.log(isAuthenticated);
     }
     useEffect(() => {
-        isAuthenticated ? navigate("/") : navigate("/login")
+        if (isAuthenticated) {
+            dispatch(fetchAllCharactersData());
+            navigate("/");
+        }
+        else {
+            navigate("/login");
+        }
     }, [isAuthenticated]);
 
     return (

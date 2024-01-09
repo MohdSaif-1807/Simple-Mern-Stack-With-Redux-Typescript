@@ -30,7 +30,7 @@ export default function Navbar() {
             <AppBar position="static" sx={{ backgroundColor: "black", marginTop: "1px" }}>
                 <Toolbar>
                     <Typography variant="h5" component="div" sx={{ flexGrow: 1, fontFamily: "poppins", fontWeight: "bold" }}>
-                        Dragon Ball Z
+                        Games Info Zone
                     </Typography>
                     <Button onClick={(e) => handleLogout(e)} color="inherit" sx={{ fontFamily: "poppins", fontWeight: "bold" }}>Logout</Button>
                 </Toolbar>
