@@ -84,29 +84,29 @@ Games Info Zone is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) ap
 
 ## Screenshots
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/9daeac49-a6e8-4aad-afb5-cf0c2043c2be)
 ### Registration Page
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/9daeac49-a6e8-4aad-afb5-cf0c2043c2be)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/74eedfb6-f29b-49c7-a1f4-6a6a980f3e6d)
 ### Login Page
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/74eedfb6-f29b-49c7-a1f4-6a6a980f3e6d)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/ca741fd9-d4fa-49f2-bcd7-60c2f6e4fadb)
 ### Zod Validation in Registration Page
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/ca741fd9-d4fa-49f2-bcd7-60c2f6e4fadb)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/b7a5ce5b-8615-4a1e-bb65-b3fa9f530f8b)
 ### Redux states prior to Login
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/b7a5ce5b-8615-4a1e-bb65-b3fa9f530f8b)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/04e89d4f-bdac-40de-9269-336c4c1b4edc)
 ### Redux states afer Login
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/04e89d4f-bdac-40de-9269-336c4c1b4edc)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/3324b15c-7cab-4e92-af12-fb26569de155)
 ### Dashboard
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/3324b15c-7cab-4e92-af12-fb26569de155)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/3f84c33c-a467-45a4-a9e2-4216d62be477)
 ### Know More feature in Dashboard
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/3f84c33c-a467-45a4-a9e2-4216d62be477)
 
-![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/e260e572-ec2a-45c3-8078-9b2528317eea)
 ### Logout states in redux
+![image](https://github.com/MohdSaif-1807/Simple-Mern-Stack-With-Redux-Typescript/assets/113005309/e260e572-ec2a-45c3-8078-9b2528317eea)
 
 ## Contributing
 
