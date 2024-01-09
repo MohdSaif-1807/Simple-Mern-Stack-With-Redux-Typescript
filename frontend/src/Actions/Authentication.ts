@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const login = (email: string, password: string) => async (dispatch: AppDispatch) => {
     try {
-        const { data } = await axios.post('http://localhost:5000/api/authentication/login', { email, password }, {
+        const { data } = await axios.post('https://gamezone-backend.onrender.com/api/authentication/login', { email, password }, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -24,7 +24,7 @@ export const login = (email: string, password: string) => async (dispatch: AppDi
 
 export const Logout = () => async (dispatch: AppDispatch) => {
     try {
-        const { data } = await axios.post("http://localhost:5000/api/authentication/logout");
+        const { data } = await axios.post("https://gamezone-backend.onrender.com/api/authentication/logout");
         dispatch({
             type: "logoutSuccess",
             payload: data

@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchAllCharactersData = () => async (dispatch: AppDispatch) => {
     try {
-        const { data } = await axios.get("http://localhost:5000/api/data/characters");
+        const { data } = await axios.get("https://gamezone-backend.onrender.com/api/data/characters");
         console.log("in Actions!!");
         console.log(data.data);
         dispatch({
@@ -18,7 +18,7 @@ export const fetchAllCharactersData = () => async (dispatch: AppDispatch) => {
 
 export const fetchSpecificCharacterData = (sno: number) => async (dispatch: AppDispatch) => {
     try {
-        const { data } = await axios.get(`http://localhost:5000/api/data/characterbrief/${sno}`);
+        const { data } = await axios.get(`https://gamezone-backend.onrender.com/api/data/characterbrief/${sno}`);
         console.log("in Actions-2!!");
         console.log(data);
         dispatch({
