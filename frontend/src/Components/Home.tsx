@@ -41,10 +41,10 @@ export const Home = () => {
     const data = useSelector((state: RootState) => state.data.data);
     const charData = useSelector((state: RootState) => state.data_brief.data_brief);
     useEffect(() => {
+	dispatch(fetchAllCharactersData());
         if (isAuthenticated) {
             navigate("/");
             console.log(data);
-            dispatch(fetchAllCharactersData());
             setCharacters(data);
         }
         else {
