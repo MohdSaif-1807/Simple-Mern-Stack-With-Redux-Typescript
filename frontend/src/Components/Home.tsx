@@ -41,16 +41,16 @@ export const Home = () => {
     const isAuthenticated = useSelector((state: RootState) => state.user.isAuthenticated);
     const data = useSelector((state: RootState) => state.data.data);
     useEffect(() => {
-        dispatch(fetchAllCharactersData());
         if (isAuthenticated) {
             navigate("/");
+            dispatch(fetchAllCharactersData());
             console.log(data);
             setCharacter(data);
         }
         else {
             navigate("/login");
         }
-    }, [isAuthenticated]);
+    }, [dispatch]);
     return (
         <>
             <Navbar />
