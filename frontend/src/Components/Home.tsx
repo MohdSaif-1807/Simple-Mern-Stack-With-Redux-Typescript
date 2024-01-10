@@ -50,7 +50,7 @@ export const Home = () => {
         else {
             navigate("/login");
         }
-    }, [isAuthenticated,data]);
+    }, [isAuthenticated]);
     return (
         <>
             <Navbar />
