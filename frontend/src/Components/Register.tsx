@@ -68,7 +68,7 @@ export const Register = () => {
     const navigate = useNavigate();
     const submitData = async (data: FormData) => {
         console.log("IT WORKED", data);
-        await axios.post("http://localhost:5000/api/authentication/register", data).
+        await axios.post("https://gamezone-backend.onrender.com/api/authentication/register", data).
             then((res) => {
                 console.log(res.data);
                 console.log("Registration success");
