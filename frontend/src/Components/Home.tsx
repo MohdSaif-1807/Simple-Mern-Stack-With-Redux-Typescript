@@ -1,6 +1,5 @@
 import Navbar from "./Navbar"
 import { Box, Button, CardActions, Grid, Stack, Typography } from "@mui/material";
-// import character from "../Data/character.json";
 import { DataSet } from "../Reducers/Data";
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
@@ -34,7 +33,8 @@ const CustomStyleButton = styled(Button)({
 
 
 export const Home = () => {
-    const { setOpen, setIndex, characters, setCharacters } = useContext(AppContext);
+    const { setOpen, setIndex } = useContext(AppContext);
+    const [characters, setCharacters] = useState<DataSet[]>([]);
     const navigate = useNavigate();
     const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const isAuthenticated = useSelector((state: RootState) => state.user.isAuthenticated);

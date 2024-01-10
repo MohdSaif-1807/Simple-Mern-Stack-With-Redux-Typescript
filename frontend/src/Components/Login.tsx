@@ -41,10 +41,8 @@ const inputStyle = { color: "white", WebkitBoxShadow: "0 0 0 1000px grey inset",
 export const Login = () => {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
-    const { setCharacters } = useContext(AppContext);
     const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const isAuthenticated = useSelector((state: RootState) => state?.user.isAuthenticated);
-    const data = useSelector((state: RootState) => state.data.data);
     const [password, setPassword] = useState("");
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();

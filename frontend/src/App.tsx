@@ -6,22 +6,18 @@ import { useState } from 'react';
 import { AppContext } from './AppContext';
 import { Provider } from 'react-redux';
 import store from './Store';
-import { ModalComponent } from './Components/ModalComponent';
-import { DataSet } from './Reducers/Data';
 function App() {
   const [open, setOpen] = useState<Boolean>(false);
   const [close, setClose] = useState<Boolean>(false);
   const [index, setIndex] = useState<Number>(0);
-  const [characters, setCharacters] = useState<DataSet[]>([]);
   return (
     <>
       <Provider store={store}>
-        <AppContext.Provider value={{ open, setOpen, close, setClose, index, setIndex, characters, setCharacters }}>
+        <AppContext.Provider value={{ open, setOpen, close, setClose, index, setIndex}}>
           <Routes>
             <Route path='/' element={<Home />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/login" element={<Login />}></Route>
-            <Route path="/model-check" element={<ModalComponent />}></Route>
           </Routes>
         </AppContext.Provider>
       </Provider>
