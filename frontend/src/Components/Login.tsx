@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
@@ -12,6 +12,7 @@ import { RootState } from "../Store";
 import { useNavigate } from "react-router-dom";
 import { login } from "../Actions/Authentication";
 import { fetchAllCharactersData } from "../Actions/Fetching";
+import { AppContext } from "../AppContext";
 
 const CustomButton = styled(Button)({
     marginTop: "30px",
@@ -40,10 +41,12 @@ const inputStyle = { color: "white", WebkitBoxShadow: "0 0 0 1000px grey inset",
 export const Login = () => {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
+    const { setCharacters } = useContext(AppContext);
     const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const isAuthenticated = useSelector((state: RootState) => state?.user.isAuthenticated);
+    const data = useSelector((state: RootState) => state.data.data);
     const [password, setPassword] = useState("");
-    const handleSubmit = async(e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         console.log(email + " " + password);
         await dispatch(login(email, password));
@@ -57,7 +60,7 @@ export const Login = () => {
         else {
             navigate("/login");
         }
-    }, [isAuthenticated,dispatch]);
+    }, [isAuthenticated]);
 
     return (
         <>

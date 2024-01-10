@@ -17,7 +17,7 @@ import { useContext, useEffect, useState } from "react";
 import { ModalComponent } from "./ModalComponent";
 
 import styled from "@emotion/styled";
-import { fetchAllCharactersData } from "../Actions/Fetching";
+import { fetchAllCharactersData, fetchSpecificCharacterData } from "../Actions/Fetching";
 
 const CustomStyleButton = styled(Button)({
     fontFamily: "poppins",
@@ -34,18 +34,18 @@ const CustomStyleButton = styled(Button)({
 
 
 export const Home = () => {
-    const { setOpen, setIndex } = useContext(AppContext);
+    const { setOpen, setIndex, characters, setCharacters } = useContext(AppContext);
     const navigate = useNavigate();
-    const [character, setCharacter] = useState<DataSet[]>([]);
     const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const isAuthenticated = useSelector((state: RootState) => state.user.isAuthenticated);
     const data = useSelector((state: RootState) => state.data.data);
+    const charData = useSelector((state: RootState) => state.data_brief.data_brief);
     useEffect(() => {
         if (isAuthenticated) {
             navigate("/");
-            dispatch(fetchAllCharactersData());
             console.log(data);
-            setCharacter(data);
+            dispatch(fetchAllCharactersData());
+            setCharacters(data);
         }
         else {
             navigate("/login");
@@ -59,7 +59,7 @@ export const Home = () => {
                 <Box sx={{ flexGrow: "5" }}>
                     <Grid container spacing={5}>
                         {
-                            character.map((data: DataSet, ind: number) => (
+                            characters.map((data: DataSet, ind: number) => (
                                 <Grid item>                                    <Card sx={{ maxWidth: 345 }}>
                                     <CardMedia component="img" height="200" src={data.Image} alt="green iguana" />
                                     <CardContent sx={{ backgroundColor: "black" }}>
@@ -71,7 +71,7 @@ export const Home = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardActions sx={{ backgroundColor: "black", justifyContent: "center", justifyItems: "center", alignContent: "center", alignItems: "center" }}>
-                                        <CustomStyleButton onClick={() => { setIndex(ind); setOpen(true); }}>Know More </CustomStyleButton>
+                                        <CustomStyleButton onClick={async () => { setIndex(ind); await dispatch(fetchSpecificCharacterData(ind)); console.log("char DAta"); console.log(charData); setOpen(true); }}>Know More </CustomStyleButton>
                                     </CardActions>
                                 </Card>
                                 </Grid>

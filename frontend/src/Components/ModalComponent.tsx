@@ -23,13 +23,15 @@ const style = {
 
 export const ModalComponent = () => {
     const { open, setOpen, index } = useContext(AppContext);
-    const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const data = useSelector((state: RootState) => state.data_brief.data_brief);
+    const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const [DataToMap, setDataToMap] = useState<DataSetBrief>();
     useEffect(() => {
         dispatch(fetchSpecificCharacterData(Number(index)));
         setDataToMap(data);
-    }, [dispatch,open, index])
+        console.log("in Modal Component");
+        console.log(DataToMap);
+    }, [index, open, dispatch]);
 
     return (
         <>
