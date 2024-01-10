@@ -29,7 +29,7 @@ export const ModalComponent = () => {
     useEffect(() => {
         dispatch(fetchSpecificCharacterData(Number(index)));
         setDataToMap(data);
-    }, [open, index])
+    }, [dispatch,open, index])
 
     return (
         <>
