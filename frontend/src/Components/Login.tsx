@@ -43,21 +43,21 @@ export const Login = () => {
     const dispatch = useDispatch<ThunkDispatch<RootState, undefined, AnyAction>>();
     const isAuthenticated = useSelector((state: RootState) => state?.user.isAuthenticated);
     const [password, setPassword] = useState("");
-    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleSubmit = async(e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         console.log(email + " " + password);
-        dispatch(login(email, password));
+        await dispatch(login(email, password));
+        await dispatch(fetchAllCharactersData());
         console.log(isAuthenticated);
     }
     useEffect(() => {
         if (isAuthenticated) {
-            dispatch(fetchAllCharactersData());
             navigate("/");
         }
         else {
             navigate("/login");
         }
-    }, [isAuthenticated]);
+    }, [isAuthenticated,dispatch]);
 
     return (
         <>
