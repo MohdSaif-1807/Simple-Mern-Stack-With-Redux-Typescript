@@ -52,6 +52,7 @@ export const Login = () => {
         console.log(isAuthenticated);
     }
     useEffect(() => {
+	dispatch(fetchAllCharactersData());
         if (isAuthenticated) {
             navigate("/");
         }
